@@ -5,7 +5,7 @@ def estandariza_texto(texto: str, formato: str) -> str:
     texto_limpio = texto.strip()
     
     if formato == "titulo":
-        return texto_limpio.title() # Ej: "juan pérez" -> "Juan Pérez"
+        return texto_limpio.capitalize() # Ej: "juan pérez" -> "Juan Pérez"
     elif formato == "minuscula":
         return texto_limpio.lower() # Ej: "JUAN@GMAIL.COM" -> "juan@gmail.com"
     elif formato == "mayuscula":
@@ -80,7 +80,7 @@ def capturar_participante() -> dict:
            
         try:
             if validar_correo (correo):
-                print ("-> El correo ingresado es inválido.")
+                print ("-> El correo ingresado es válido.")
                 correo_valido = True                
             else:
                 print ("-> La información proporcionada no es un correo.")
